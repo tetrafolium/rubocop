@@ -1,0 +1,33 @@
+inspecode:
+
+  brakeman:
+    thesholds: { num-issues: 999 }
+
+  bundler-audit:
+    thesholds: { num-issues: 999 }
+
+  cpd:
+    thesholds: { num-issues: 999 }
+
+  grep:
+    thesholds: { num-issues: 999 }
+
+  jscpd:
+    thesholds: { num-issues: 999 }
+
+  misspell:
+    auto-fix: true
+    thesholds: { num-issues: 999 }
+
+  rails_best_practices:
+    thesholds: { num-issues: 999 }
+
+  reek:
+    thesholds: { num-issues: 999 }
+
+  rubocop:
+    auto-fix: true
+    thesholds: { num-issues: 999 }
+
+  unused:
+    thesholds: { num-issues: 999 }
