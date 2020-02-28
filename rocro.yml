@@ -1,5 +1,9 @@
 inspecode:
 
+  experimental:
+    runtime:
+      python: 3
+
   brakeman:
     thresholds: { num-issues: 999 }
 
