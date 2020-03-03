@@ -1,14 +1,23 @@
 inspecode:
 
-  experimental:
-    runtime:
-      python: 3
+  ##----------------------------------------------------------------------------
+  ##  not a Ruby on Rails repository ...
+  ##  ----------------------------------------------------------------
+  ##  $ brakeman --no-exit-on-warn --no-exit-on-error --absolute-paths -f json --output "${OUTPUT}" .
+  ##  Loading scanner...
+  ##  Please supply the path to a Rails application (looking in /home/rocro/src/github.com/tetrafolium/rubocop).
+  ##  Brakeman finished with errors.
+  ##----------------------------------------------------------------------------
+  #brakeman:
+  #  thresholds: { num-issues: 999 }
 
-  brakeman:
-    thresholds: { num-issues: 999 }
-
-  bundler-audit:
-    thresholds: { num-issues: 999 }
+  ##----------------------------------------------------------------------------
+  ##  $ bundler-audit check --update --quiet --verbose
+  ##  /usr/local/bundle/gems/bundler-audit-0.6.1/lib/bundler/audit/scanner.rb:46:in `read': No such file or directory @ rb_sysopen - /home/rocro/src/github.com/tetrafolium/rubocop/Gemfile.lock (Errno::ENOENT)
+  ##  bundler-audit finished with errors.
+  ##----------------------------------------------------------------------------
+  #bundler-audit:
+  #  thresholds: { num-issues: 999 }
 
   cpd:
     thresholds: { num-issues: 5 }
@@ -17,7 +26,7 @@ inspecode:
     thresholds: { num-issues: 50 }
 
   jscpd:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 169 }
 
   misspell:
     auto-fix: true
@@ -27,11 +36,24 @@ inspecode:
     thresholds: { num-issues: 0 }
 
   reek:
-    thresholds: { num-issues: 999 }
+  - thresholds: { num-issues: 999 }   # too many issues detected: 3529 > 1000
+  - options: { --smell: DuplicateMethodCall }
+    thresholds: { num-issues: 786 }
+  - options: { --smell: UtilityFunction }
+    thresholds: { num-issues: 678 }
+  - options: { --smell: TooManyStatements }
+    thresholds: { num-issues: 417 }
 
-  rubocop:
-    auto-fix: true
-    thresholds: { num-issues: 999 }
+  ##----------------------------------------------------------------------------
+  ##  RuboCop started.
+  ##  resolving dependencies...
+  ##  cannot load such file -- rubocop-performance
+  ##  /usr/local/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+  ##  RuboCop finished with errors.
+  ##----------------------------------------------------------------------------
+  #rubocop:
+  #  auto-fix: true
+  #  thresholds: { num-issues: 999 }
 
   unused:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 305 }
