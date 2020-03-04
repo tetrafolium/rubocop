@@ -1,17 +1,9 @@
 inspecode:
 
-  ##----------------------------------------------------------------------------
-  ##  not a Ruby on Rails repository ...
-  ##  ----------------------------------------------------------------
-  ##  $ brakeman --no-exit-on-warn --no-exit-on-error --absolute-paths -f json --output "${OUTPUT}" .
-  ##  Loading scanner...
-  ##  Please supply the path to a Rails application (looking in /home/rocro/src/github.com/tetrafolium/rubocop).
-  ##  Brakeman finished with errors.
-  ##----------------------------------------------------------------------------
   brakeman:
     options:
       --path: spec/fixtures/html_formatter/project
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   ##----------------------------------------------------------------------------
   ##  $ bundler-audit check --update --quiet --verbose
@@ -25,7 +17,7 @@ inspecode:
     thresholds: { num-issues: 5 }
 
   fossology:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 6 }
 
   grep:
     thresholds: { num-issues: 50 }
@@ -41,7 +33,7 @@ inspecode:
     thresholds: { num-issues: 0 }
 
   reek:
-  - thresholds: { num-issues: 999 }   # too many issues detected: 3529 > 1000
+  #- thresholds: { num-issues: 999 }   # too many issues detected: 3529 > 1000
   - options: { --smell: DuplicateMethodCall }
     thresholds: { num-issues: 786 }
   - options: { --smell: UtilityFunction }
