@@ -24,6 +24,9 @@ inspecode:
   cpd:
     thresholds: { num-issues: 5 }
 
+  fossology:
+    thresholds: { num-issues: 999 }
+
   grep:
     thresholds: { num-issues: 50 }
 
