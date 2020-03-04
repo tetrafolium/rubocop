@@ -8,8 +8,10 @@ inspecode:
   ##  Please supply the path to a Rails application (looking in /home/rocro/src/github.com/tetrafolium/rubocop).
   ##  Brakeman finished with errors.
   ##----------------------------------------------------------------------------
-  #brakeman:
-  #  thresholds: { num-issues: 999 }
+  brakeman:
+    options:
+      --path: spec/fixtures/html_formatter/project/app
+    thresholds: { num-issues: 999 }
 
   ##----------------------------------------------------------------------------
   ##  $ bundler-audit check --update --quiet --verbose
