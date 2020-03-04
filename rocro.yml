@@ -10,7 +10,7 @@ inspecode:
   ##----------------------------------------------------------------------------
   brakeman:
     options:
-      --path: spec/fixtures/html_formatter/project/app
+      --path: spec/fixtures/html_formatter/project
     thresholds: { num-issues: 999 }
 
   ##----------------------------------------------------------------------------
