@@ -10,8 +10,8 @@ inspecode:
   ##  /usr/local/bundle/gems/bundler-audit-0.6.1/lib/bundler/audit/scanner.rb:46:in `read': No such file or directory @ rb_sysopen - /home/rocro/src/github.com/tetrafolium/rubocop/Gemfile.lock (Errno::ENOENT)
   ##  bundler-audit finished with errors.
   ##----------------------------------------------------------------------------
-  #bundler-audit:
-  #  thresholds: { num-issues: 999 }
+  bundler-audit:
+    thresholds: { num-issues: 999 }
 
   cpd:
     thresholds: { num-issues: 5 }
@@ -48,9 +48,10 @@ inspecode:
   ##  /usr/local/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
   ##  RuboCop finished with errors.
   ##----------------------------------------------------------------------------
-  #rubocop:
-  #  auto-fix: true
-  #  thresholds: { num-issues: 999 }
+  rubocop:
+    #config-file: rubocop.yml    # (auto-detected)
+    #auto-fix: true
+    thresholds: { num-issues: 999 }
 
   unused:
     thresholds: { num-issues: 305 }
