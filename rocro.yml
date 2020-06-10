@@ -49,7 +49,7 @@ inspecode:
   ##  RuboCop finished with errors.
   ##----------------------------------------------------------------------------
   rubocop:
-    #config-file: rubocop.yml    # (auto-detected)
+    #config-file: .rubocop.yml    # (auto-detected)
     #auto-fix: true
     thresholds: { num-issues: 999 }
 
