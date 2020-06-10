@@ -39,10 +39,10 @@ inspecode:
     thresholds: { num-issues: 417 }
 
   ##----------------------------------------------------------------------------
+  ## --> tractrix/codelift#1862
   ##  RuboCop started.
   ##  resolving dependencies...
   ##  cannot load such file -- rubocop-performance
-  ##  /usr/local/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
   ##  RuboCop finished with errors.
   ##----------------------------------------------------------------------------
   rubocop:
@@ -52,4 +52,4 @@ inspecode:
 
   unused:
     options: [ --single-occurrence, --all-likelihoods ]
-    thresholds: { num-issues: 305 }
+    thresholds: { num-issues: 81 }
