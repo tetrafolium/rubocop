@@ -5,13 +5,10 @@ inspecode:
       --path: spec/fixtures/html_formatter/project
     thresholds: { num-issues: 0 }
 
-  ##----------------------------------------------------------------------------
-  ##  $ bundler-audit check --update --quiet --verbose
-  ##  /usr/local/bundle/gems/bundler-audit-0.6.1/lib/bundler/audit/scanner.rb:46:in `read': No such file or directory @ rb_sysopen - /home/rocro/src/github.com/tetrafolium/rubocop/Gemfile.lock (Errno::ENOENT)
-  ##  bundler-audit finished with errors.
-  ##----------------------------------------------------------------------------
   bundler-audit:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
+      ## Gemfile.lock is not found. Put Gemfile.lock in your repository to run bundler-audit correctly. 
+      ## found no input files
 
   cpd:
     thresholds: { num-issues: 5 }
@@ -54,4 +51,5 @@ inspecode:
     thresholds: { num-issues: 999 }
 
   unused:
+    options: [ --single-occurrence, --all-likelihoods ]
     thresholds: { num-issues: 305 }
