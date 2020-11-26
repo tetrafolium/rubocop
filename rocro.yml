@@ -12,7 +12,7 @@ inspecode:
       ## found no input files
 
   cpd:
-    thresholds: { num-issues: 5 }
+    thresholds: { num-issues: 4 }
 
   fossology:
     thresholds: { num-issues: 6 }
@@ -21,7 +21,7 @@ inspecode:
     thresholds: { num-issues: 50 }
 
   jscpd:
-    thresholds: { num-issues: 169 }
+    thresholds: { num-issues: 162 }
 
   misspell:
     auto-fix: true
@@ -40,16 +40,16 @@ inspecode:
     thresholds: { num-issues: 417 }
 
   ##----------------------------------------------------------------------------
-  ## --> tractrix/codelift#1862
+  ## --> tractrix/codelift#1862 ... (closed without fix)
   ##  RuboCop started.
   ##  resolving dependencies...
   ##  cannot load such file -- rubocop-performance
   ##  RuboCop finished with errors.
   ##----------------------------------------------------------------------------
-  rubocop:
-    #config-file: .rubocop.yml    # (auto-detected)
-    #auto-fix: true
-    thresholds: { num-issues: 999 }
+  # rubocop:
+  #   #config-file: .rubocop.yml    # (auto-detected)
+  #   #auto-fix: true
+  #   thresholds: { num-issues: 999 }
 
   unused:
     options: [ --single-occurrence, --all-likelihoods ]
