@@ -7,7 +7,8 @@ inspecode:
 
   bundler-audit:
     thresholds: { num-issues: 0 }
-      ## Gemfile.lock is not found. Put Gemfile.lock in your repository to run bundler-audit correctly. 
+      ## Gemfile.lock is not found.
+      ## Put Gemfile.lock in your repository to run bundler-audit correctly.
       ## found no input files
 
   cpd:
