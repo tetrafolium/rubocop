@@ -1374,8 +1374,8 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment do
       it 'suggests the method name' do
         expect_offense(<<~RUBY)
           def some_method
-            enviromnent = {}
-            ^^^^^^^^^^^ Useless assignment to variable - `enviromnent`. Did you mean `environment`?
+            environments = {}
+            ^^^^^^^^^^^ Useless assignment to variable - `environments`. Did you mean `environment`?
             another_symbol
             puts environment
           end
@@ -1389,8 +1389,8 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment do
           def some_method
             environment = nil
             another_symbol
-            enviromnent = {}
-            ^^^^^^^^^^^ Useless assignment to variable - `enviromnent`. Did you mean `environment`?
+            environments = {}
+            ^^^^^^^^^^^ Useless assignment to variable - `environments`. Did you mean `environment`?
             puts environment
           end
         RUBY
@@ -1401,8 +1401,8 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment do
       it 'does not suggest any name' do
         expect_offense(<<~RUBY)
           def some_method
-            enviromnent = {}
-            ^^^^^^^^^^^ Useless assignment to variable - `enviromnent`.
+            environments = {}
+            ^^^^^^^^^^^ Useless assignment to variable - `environments`.
             another_symbol
             puts envelope
           end
@@ -1414,8 +1414,8 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment do
       it 'does not suggest any name' do
         expect_offense(<<~RUBY)
           def some_method
-            enviromnent = {}
-            ^^^^^^^^^^^ Useless assignment to variable - `enviromnent`.
+            environments = {}
+            ^^^^^^^^^^^ Useless assignment to variable - `environments`.
             another_symbol
             puts self.environment
           end
@@ -1427,8 +1427,8 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment do
       it 'does not suggest any name' do
         expect_offense(<<~RUBY)
           def some_method
-            enviromnent = {}
-            ^^^^^^^^^^^ Useless assignment to variable - `enviromnent`.
+            environments = {}
+            ^^^^^^^^^^^ Useless assignment to variable - `environments`.
             another_symbol
             puts environment(1)
           end
@@ -1440,8 +1440,8 @@ RSpec.describe RuboCop::Cop::Lint::UselessAssignment do
       it 'does not suggest any name' do
         expect_offense(<<~RUBY)
           class SomeClass
-            enviromnent = {}
-            ^^^^^^^^^^^ Useless assignment to variable - `enviromnent`.
+            environments = {}
+            ^^^^^^^^^^^ Useless assignment to variable - `environments`.
 
             def some_method(environment)
               puts environment
